@@ -1,0 +1,54 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta http-equiv="Cache-Control" content="public">
+	
+	<title>Login</title>
+    
+    <link type="text/css" rel="stylesheet" href="login-v1.css">
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+    
+	<script>
+        $(document).ready(function() {
+            
+            $("#login-button").click(function(event){
+
+                event.preventDefault();
+
+                $('form').fadeOut(500);
+                $('.wrapper').addClass('form-success');
+            });
+        });    
+    </script>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="container">
+            <h1>Bienvenido</h1>
+            <form class="form">
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Password">
+                <button type="submit" id="login-button">Entrar</button>
+            </form>
+        </div>
+
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    
+    
+</body>
