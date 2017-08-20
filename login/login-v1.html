@@ -13,12 +13,17 @@
 	<script>
         $(document).ready(function() {
             
+            $('h1 small').hide();
+            
             $("#login-button").click(function(event){
 
                 event.preventDefault();
-
+                
                 $('form').fadeOut(500);
+                
                 $('.wrapper').addClass('form-success');
+                
+                $('h1 small').delay(750).fadeIn(1500);
             });
         });    
     </script>
@@ -28,7 +33,7 @@
     
     <div class="wrapper">
         <div class="container">
-            <h1>Bienvenido</h1>
+            <h1>Bienvenida a una nueva banca digital.<br><small>Empez&aacute; a disfrutar de esta nueva experiencia.</small></h1>
             <form class="form">
                 <input type="text" placeholder="Usuario">
                 <input type="password" placeholder="Password">
