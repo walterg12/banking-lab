@@ -1,0 +1,75 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta http-equiv="Cache-Control" content="public">
+	
+	<title>Login</title>
+    
+    <link type="text/css" rel="stylesheet" href="login-v2.css">
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+    
+	<script>
+        $(document).ready(function() {
+            
+            $('h1 small').hide();
+            $('.sk-folding-cube').hide();
+            
+            $("#login-button").click(function(event){
+
+                event.preventDefault();
+                
+                $('form').fadeOut(500);
+                
+                $('.wrapper').addClass('form-success');
+                
+                $('h1 small').delay(750).fadeIn(1500);
+                $('.sk-folding-cube').delay(750).fadeIn(1500);
+
+                $("html").delay(4500).fadeOut(1500);
+
+                setTimeout(function() {
+                  window.location.href = "/banking-lab/admin/gentelella/production/index.html";
+                }, 5500);
+            });
+        });    
+    </script>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="container">
+            <h1>Bienvenidos a la nueva banca digital.<br><small>Empez&aacute; a disfrutar ahora mismo de esta nueva experiencia.</small></h1>
+
+            <div class="sk-folding-cube">
+              <div class="sk-cube1 sk-cube"></div>
+              <div class="sk-cube2 sk-cube"></div>
+              <div class="sk-cube4 sk-cube"></div>
+              <div class="sk-cube3 sk-cube"></div>
+            </div>
+
+            <form class="form">
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Password">
+                <button type="submit" id="login-button">Entrar</button>
+            </form>
+        </div>
+
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    
+    
+</body>

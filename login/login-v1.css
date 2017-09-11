@@ -42,6 +42,26 @@ body:-ms-input-placeholder {
     font-weight: 300;
 }
 
+input::-webkit-input-placeholder{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    opacity: 1;
+    font-weight: 300;
+}
+input:-moz-placeholder {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    opacity: 1;
+    font-weight: 300;
+}
+
+input:focus::-webkit-input-placeholder{
+    color: #0c768a;
+}
+input:focus:-moz-placeholder {
+    color: #0c768a;
+}
+
 .wrapper {
     /*background: #50a3a2;
     background: linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
@@ -80,6 +100,10 @@ body:-ms-input-placeholder {
     font-weight: 200;
 }
 
+.container h1 small {
+    font-size: 23px;
+}
+
 .container h1 {
     transition-duration: 1s;
     transition-timing-function: ease-in- put;
@@ -93,6 +117,7 @@ form {
 
 form input {
     appearance: none;
+    font-family: inherit;
     outline: 0;
     border: 1px solid rgba(255, 255, 255, 0.4);
     background-color: rgba(255, 255, 255, 0.2);
@@ -121,6 +146,7 @@ form input:focus {
 
 form button {
     appearance: none;
+    font-family: inherit;
     outline: 0;
     background-color: white;
     border: 0;
