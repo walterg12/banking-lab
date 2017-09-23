@@ -198,7 +198,7 @@ $(document).ready(function() {
         var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
         elems.forEach(function (html) {
             var switchery = new Switchery(html, {
-                color: '#26B99A'
+                color: '#51D5D0'
             });
         });
     }
@@ -463,7 +463,7 @@ if (typeof NProgress != 'undefined') {
 			grid: {
 				show: true,
 				aboveData: true,
-				color: "#3f3f3f",
+				color: "#AfAfAf",
 				labelMargin: 10,
 				axisMargin: 0,
 				borderWidth: 0,
@@ -499,7 +499,7 @@ if (typeof NProgress != 'undefined') {
 				width: 40,
 				height: 1
 			},
-			colors: ['#96CA59', '#3F97EB', '#72c380', '#6f7a8a', '#f7cb38', '#5a8022', '#2c7282'],
+			colors: ['#51D5D0', '#3F97EB', '#72c380', '#6f7a8a', '#f7cb38', '#5a8022', '#2c7282'],
 			shadowSize: 0,
 			tooltip: true,
 			tooltipOpts: {
@@ -559,10 +559,10 @@ if (typeof NProgress != 'undefined') {
 			
 			$.plot( $("#chart_plot_02"), 
 			[{ 
-				label: "Email Sent", 
+				label: "Movimientos de Cuenta", 
 				data: chart_plot_02_data, 
 				lines: { 
-					fillColor: "rgba(150, 202, 89, 0.12)" 
+					fillColor: "rgba(150, 202, 89, 0.05)" 
 				}, 
 				points: { 
 					fillColor: "#fff" } 
@@ -851,7 +851,7 @@ if (typeof NProgress != 'undefined') {
 					'7': '#a1a1a1'
 				},
 				barSpacing: 2,
-				barColor: '#26B99A'
+				barColor: '#51D5D0'
 			});
 			
 			
@@ -859,11 +859,12 @@ if (typeof NProgress != 'undefined') {
 				type: 'line',
 				height: '40',
 				width: '200',
-				lineColor: '#26B99A',
+				lineColor: '#51D5D0',
 				fillColor: '#ffffff',
 				lineWidth: 3,
-				spotColor: '#34495E',
-				minSpotColor: '#34495E'
+				spotColor: '#51D5D0',
+				minSpotColor: '#51D5D0',
+				maxSpotColor: '#51D5D0'
 			});
 	
 	
@@ -1785,14 +1786,19 @@ if (typeof NProgress != 'undefined') {
 			if( typeof ($.fn.smartWizard) === 'undefined'){ return; }
 			console.log('init_SmartWizard');
 			
-			$('#wizard').smartWizard();
+			$('#wizard').smartWizard({
+				labelNext:'Siguiente', // label for Next button
+    			labelPrevious:'Anterior', // label for Previous button
+    			labelFinish:'Transferir',  // label for Finish button 
+    			buttonOrder: ['Siguiente', 'Anterior', 'Transferir']
+			});
 
 			$('#wizard_verticle').smartWizard({
 			  transitionEffect: 'slide'
 			});
 
-			$('.buttonNext').addClass('btn btn-success');
-			$('.buttonPrevious').addClass('btn btn-primary');
+			$('.buttonNext').addClass('btn btn-primary');
+			$('.buttonPrevious').addClass('btn btn-default');
 			$('.buttonFinish').addClass('btn btn-default');
 			
 		};
@@ -2602,22 +2608,25 @@ if (typeof NProgress != 'undefined') {
 				Morris.Bar({
 				  element: 'graph_bar',
 				  data: [
-					{device: 'iPhone 4', geekbench: 380},
-					{device: 'iPhone 4S', geekbench: 655},
-					{device: 'iPhone 3GS', geekbench: 275},
-					{device: 'iPhone 5', geekbench: 1571},
-					{device: 'iPhone 5S', geekbench: 655},
-					{device: 'iPhone 6', geekbench: 2154},
-					{device: 'iPhone 6 Plus', geekbench: 1144},
-					{device: 'iPhone 6S', geekbench: 2371},
-					{device: 'iPhone 6S Plus', geekbench: 1471},
-					{device: 'Other', geekbench: 1371}
+				  	{device: 'Noviembre 2016', geekbench: 655},
+				  	{device: 'Diciembre 2016', geekbench: 953},
+				  	{device: 'Enero 2017', geekbench: 2234},
+				  	{device: 'Febrero 2017', geekbench: 3324},
+					{device: 'Marzo 2017', geekbench: 7154},
+					{device: 'Abril 2017', geekbench: 12144},
+					{device: 'Mayo 2017', geekbench: 15055},
+					{device: 'Junio 2017', geekbench: 16055},
+					{device: 'Julio 2017', geekbench: 17055},
+					{device: 'Agosto 2017', geekbench: 18055},
+					{device: 'Septiembre 2017', geekbench: 19055},
+					{device: 'Octubre 2017', geekbench: 15055}
 				  ],
 				  xkey: 'device',
 				  ykeys: ['geekbench'],
-				  labels: ['Geekbench'],
+				  labels: ['Saldo'],
 				  barRatio: 0.4,
-				  barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+				  barSizeRatio: 0.4,
+				  barColors: ['#51D5D0 ', '#34495E', '#ACADAC', '#3498DB'],
 				  xLabelAngle: 35,
 				  hideHover: 'auto',
 				  resize: true
@@ -2760,8 +2769,8 @@ if (typeof NProgress != 'undefined') {
 		
 				  var theme = {
 				  color: [
-					  '#26B99A', '#34495E', '#BDC3C7', '#3498DB',
-					  '#9B59B6', '#8abb6f', '#759c6a', '#bfd3b7'
+					  '#51D5D0', '#34495E', '#BDC3C7', '#3498DB',
+					  '#9B59B6', '#2ce0bf', '#759c6a', '#bfd3b7'
 				  ],
 
 				  title: {
@@ -2979,14 +2988,17 @@ if (typeof NProgress != 'undefined') {
 
 				  echartBar.setOption({
 					title: {
-					  text: 'Graph title',
-					  subtext: 'Graph Sub-text'
+					  text: 'Cotizaci\u00F3n del D\u00F3lar',
+					  subtext: '\u00DAltimas dos semanas',
+					  textStyle: {
+					  	color: '#51D5D0'
+					  }
 					},
 					tooltip: {
 					  trigger: 'axis'
 					},
 					legend: {
-					  data: ['sales', 'purchases']
+					  data: ['compra', 'venta']
 					},
 					toolbox: {
 					  show: false
@@ -2994,42 +3006,47 @@ if (typeof NProgress != 'undefined') {
 					calculable: false,
 					xAxis: [{
 					  type: 'category',
-					  data: ['1?', '2?', '3?', '4?', '5?', '6?', '7?', '8?', '9?', '10?', '11?', '12?']
+					  data: ['1/10', '2/10', '3/10', '4/10', '5/10', '6/10', '7/10', '8/10', '9/10', '10/10', '11/10', '12/10']
 					}],
 					yAxis: [{
 					  type: 'value'
 					}],
 					series: [{
-					  name: 'sales',
+					  name: 'compra',
 					  type: 'bar',
-					  data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+					  itemStyle: {
+					      normal: {
+					        color: '#51D5D0'
+					      }
+					  },
+					  data: [5.0, 9.5, 10.0, 13.2, 15.6, 15.7, 15.6, 16.2, 13.6, 11.0, 9.4, 7.3],
 					  markPoint: {
 						data: [{
 						  type: 'max',
-						  name: '???'
+						  name: 'pesos'
 						}, {
 						  type: 'min',
-						  name: '???'
+						  name: 'pesos'
 						}]
 					  },
 					  markLine: {
 						data: [{
 						  type: 'average',
-						  name: '???'
+						  name: 'pesos'
 						}]
 					  }
 					}, {
-					  name: 'purchases',
+					  name: 'venta',
 					  type: 'bar',
-					  data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+					  data: [6.5, 11.9, 12.6, 15.8, 17.9, 17.9, 17.9, 18.7, 15.9, 13.5, 10.8, 7.9],
 					  markPoint: {
 						data: [{
-						  name: 'sales',
+						  name: 'compra',
 						  value: 182.2,
 						  xAxis: 7,
 						  yAxis: 183,
 						}, {
-						  name: 'purchases',
+						  name: 'venta',
 						  value: 2.3,
 						  xAxis: 11,
 						  yAxis: 3
@@ -3038,7 +3055,7 @@ if (typeof NProgress != 'undefined') {
 					  markLine: {
 						data: [{
 						  type: 'average',
-						  name: '???'
+						  name: 'pesos'
 						}]
 					  }
 					}]
@@ -4074,7 +4091,7 @@ if (typeof NProgress != 'undefined') {
 				legend: {
 				  x: 'center',
 				  y: 'bottom',
-				  data: ['rose1', 'rose2', 'rose3', 'rose4', 'rose5', 'rose6']
+				  data: ['AXYC', 'DDII', 'XSAS', 'PORT', 'BBUA', 'ASAR']
 				},
 				toolbox: {
 				  show: true,
@@ -4105,22 +4122,22 @@ if (typeof NProgress != 'undefined') {
 				  sort: 'ascending',
 				  data: [{
 					value: 10,
-					name: 'rose1'
+					name: 'AXYC'
 				  }, {
 					value: 5,
-					name: 'rose2'
+					name: 'DDII'
 				  }, {
 					value: 15,
-					name: 'rose3'
+					name: 'XSAS'
 				  }, {
 					value: 25,
-					name: 'rose4'
+					name: 'PORT'
 				  }, {
 					value: 20,
-					name: 'rose5'
+					name: 'BBUA'
 				  }, {
 					value: 35,
-					name: 'rose6'
+					name: 'ASAR'
 				  }]
 				}]
 			  });
@@ -4142,7 +4159,7 @@ if (typeof NProgress != 'undefined') {
 				legend: {
 				  x: 'center',
 				  y: 'bottom',
-				  data: ['Direct Access', 'E-mail Marketing', 'Union Ad', 'Video Ads', 'Search Engine']
+				  data: ['Kristal', 'Andrade', 'Loma Hermosa', 'Cattaneo', 'SearchMe']
 				},
 				toolbox: {
 				  show: true,
@@ -4195,19 +4212,19 @@ if (typeof NProgress != 'undefined') {
 				  },
 				  data: [{
 					value: 335,
-					name: 'Direct Access'
+					name: 'Kristal'
 				  }, {
 					value: 310,
-					name: 'E-mail Marketing'
+					name: 'Andrade'
 				  }, {
 					value: 234,
-					name: 'Union Ad'
+					name: 'Loma Hermosa'
 				  }, {
 					value: 135,
-					name: 'Video Ads'
+					name: 'Cattaneo'
 				  }, {
 					value: 1548,
-					name: 'Search Engine'
+					name: 'SearchMe'
 				  }]
 				}]
 			  });
@@ -4228,7 +4245,7 @@ if (typeof NProgress != 'undefined') {
 				legend: {
 				  x: 'center',
 				  y: 'bottom',
-				  data: ['Direct Access', 'E-mail Marketing', 'Union Ad', 'Video Ads', 'Search Engine']
+				  data: ['Bonar 2017', 'Letes', 'Letes Clase II', 'Bonos PI', 'Bonos PI U$S']
 				},
 				toolbox: {
 				  show: true,
@@ -4257,25 +4274,25 @@ if (typeof NProgress != 'undefined') {
 				},
 				calculable: true,
 				series: [{
-				  name: '访问来源',
+				  name: 'Colocaciones Primarias',
 				  type: 'pie',
 				  radius: '55%',
 				  center: ['50%', '48%'],
 				  data: [{
 					value: 335,
-					name: 'Direct Access'
+					name: 'Bonar 2017'
 				  }, {
 					value: 310,
-					name: 'E-mail Marketing'
+					name: 'Letes'
 				  }, {
 					value: 234,
-					name: 'Union Ad'
+					name: 'Letes Clase II'
 				  }, {
 					value: 135,
-					name: 'Video Ads'
+					name: 'Bonos PI'
 				  }, {
 					value: 1548,
-					name: 'Search Engine'
+					name: 'Bonos PI U$S'
 				  }]
 				}]
 			  });

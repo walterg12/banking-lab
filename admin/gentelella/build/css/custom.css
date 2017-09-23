@@ -421,7 +421,7 @@ body .container.body .right_col {
 }
 .green {
     /*color: #1ABB9C*/
-    color: #51D5D0;
+    color: #51D5D0 !important;
 }
 .color-bh {
     color: #0C768A;
@@ -1837,7 +1837,16 @@ ul.top_profiles li {
     padding: 3px 5px
 }
 ul.top_profiles li:nth-child(odd) {
-    background-color: #eee
+    background-color: #FCFCFC
+}
+.media .profile_list {
+    width: 50px;
+    height: 50px;
+    margin: 5px 10px 5px 0;
+    padding: 9px 12px
+}
+.media .profile_list i {
+    font-size: 30px
 }
 .media .profile_thumb {
     border: 1px solid;
@@ -1964,6 +1973,15 @@ h4.graph_title {
     vertical-align: bottom;
     padding: 0
 }
+
+.tile-stats .icon i.fa-cc-visa {
+    font-size: 45px !important;
+}
+
+.tile-stats .icon i.fa-calendar-o {
+    font-size: 50px !important;
+}
+
 .tile-stats .count {
     font-size: 38px;
     font-weight: bold;
@@ -2397,6 +2415,28 @@ select.parsley-error {
 }
 .btn {
     border-radius: 3px
+}
+.btn-default {
+    color: #51D5D0 !important; 
+    background-color: #fff;
+    border-color: #51D5D0 !important; 
+}
+.btn-default:focus, btn-default:active {
+    background-color: #fff;
+    border-color: #51D5D0 !important; 
+}
+.btn-primary {
+    background-color: #51D5D0 !important; 
+    border-color: #51D5D0 !important;
+}
+.btn-primary:hover, .btn-default:hover {
+    color: #fff !important;
+    background-color: #7df2f2 !important;
+    border-color: #7df2f2 !important;
+}
+.btn-primary:focus, btn-primary:active {
+    background-color: #51D5D0 !important; 
+    border-color: #51D5D0 !important;
 }
 a.btn-success,
 a.btn-primary,
@@ -3952,7 +3992,7 @@ fieldset {
 }
 .wizard_horizontal ul.wizard_steps li a.done:before,
 .wizard_horizontal ul.wizard_steps li a.done .step_no {
-    background: #1ABB9C;
+    background: #51D5D0;
     color: #fff
 }
 .wizard_horizontal ul.wizard_steps li:first-child a:before {
